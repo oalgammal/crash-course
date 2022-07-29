@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import {server} from '../../../config/index'
 import Meta from '../../../components/meta'
+import type { NextPage } from "next";
 
 
 
