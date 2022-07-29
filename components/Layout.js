@@ -1,7 +1,7 @@
 import styles from '../styles/Layout.module.css'
-import Nav from'./Nav'
-import Meta from'./Meta'
-import Header from'./Header'
+import Nav from'./nav'
+import Meta from'./meta'
+import Header from'./header'
 const Layout= ({children})=>{
 	return(
 		<>

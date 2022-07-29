@@ -1,7 +1,7 @@
 // import {useRouter} from 'next/router'
-import Link from 'next/Link'
+import Link from 'next/link'
 import {server} from '../../../config/index'
-import Meta from '../../../components/Meta'
+import Meta from '../../../components/meta'
 
 
 
