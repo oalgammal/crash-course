@@ -21,7 +21,7 @@ const article= ({article})=>{
 }
 
 export const getServerSideProps = async (context)=>{
-	const res = await fetch(`${server}/api/articles/${context.params.id}`)
+	const res = await fetch(`.../api/articles/${context.params.id}`)
 	const article = await res.json()
 	return{
 		props:{
