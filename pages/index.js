@@ -9,7 +9,7 @@ export default function Home({articles}) {
   )
 }
 
-export const getServerSideProps = async()=>{
+export const getStaticProps = async()=>{
   const res = await fetch (`${server}/api/articles`)
   const articles = await res.json()
 
