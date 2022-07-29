@@ -39,7 +39,7 @@ export const getStaticPaths = async ()=>{
         }, //this is required by api provider
         })
 	const articles = await res.json()
-	const ids = articles.articles.map(article=>article.id)
+	const ids = articles.map(article=>article.id)
 	const paths = ids.map(id=>({params:{id:id.toString()}}))
 
 	return{ 
