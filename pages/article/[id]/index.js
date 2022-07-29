@@ -21,7 +21,7 @@ const article= ({article})=>{
 }
 
 export const getServerSideProps = async (context)=>{
-	const res = await fetch(`${server}/api/articles`,
+	const res = await fetch(`.../api/articles`,
         {
             headers: {
           "User-Agent":
