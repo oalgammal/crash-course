@@ -21,8 +21,7 @@ const article= ({article})=>{
 }
 
 export const getServerSideProps = async (context)=>{
-	// console.log(context.query.id)
-	const res = await fetch(`${server}/api/articles/${context.query.id}`,
+	const res = await fetch(`http://localhost:3000/api/articles/${context.query.id}`,
         {
             headers: {
           "User-Agent":
