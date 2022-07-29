@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import {server} from '../../../config/index'
 import Meta from '../../../components/meta'
-import { NextPage } from 'next';
+// import { NextPage } from 'next';
 
 
 
@@ -46,7 +46,7 @@ export const getStaticPaths = async ()=>{
 
 	return{ 
 		paths,
-		fallback:true
+		fallback:blocking
 	}
 }
 
