@@ -21,7 +21,14 @@ const article= ({article})=>{
 }
 
 export const getServerSideProps = async (context)=>{
-	const res = await fetch(`.../api/articles/${context.params.id}`)
+	const res = await fetch(`${server}/api/articles`,
+        {
+            headers: {
+          "User-Agent":
+            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36", 
+          Accept: "application/json; charset=UTF-8",
+        }, //this is required by api provider
+        })
 	const article = await res.json()
 	return{
 		props:{
@@ -31,14 +38,14 @@ export const getServerSideProps = async (context)=>{
 }
 
 // export const getStaticPaths = async ()=>{
-// 	const res = await fetch(`${server}/api/articles`,
-//         {
-//             headers: {
-//           "User-Agent":
-//             "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36", 
-//           Accept: "application/json; charset=UTF-8",
-//         }, //this is required by api provider
-//         })
+	// const res = await fetch(`${server}/api/articles`,
+ //        {
+ //            headers: {
+ //          "User-Agent":
+ //            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36", 
+ //          Accept: "application/json; charset=UTF-8",
+ //        }, //this is required by api provider
+ //        })
 // 	const articles = await res.json()
 // 	console.log(articles)
 // 	const ids = articles.articles.map(article=>article.id)
